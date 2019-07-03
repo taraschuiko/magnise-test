@@ -1,9 +1,9 @@
 <template>
-    <h1>Teacher List Page</h1>
+  <h2>Teachers List Page</h2>
 </template>
 
 <script>
 export default {
-    name: "TeachersList"
-}
+  name: "TeachersList"
+};
 </script>

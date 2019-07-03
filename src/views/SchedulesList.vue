@@ -1,9 +1,9 @@
 <template>
-    <h1>Schedule List</h1>
+  <h2>Schedules List</h2>
 </template>
 
 <script>
 export default {
-    name: "SchedulesList"
-}
+  name: "SchedulesList"
+};
 </script>

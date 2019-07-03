@@ -1,5 +1,5 @@
 <template>
-    <h1>Group Schedule</h1>
+    <h2>Group Schedule</h2>
 </template>
 
 <script>

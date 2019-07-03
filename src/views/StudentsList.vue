@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Students List</h1>
+    <h2>Students List</h2>
     <div>
       <div v-for="student in students" :key="student.id" class="student-list__item">
         <p>First name: {{student.first_name}}</p>
