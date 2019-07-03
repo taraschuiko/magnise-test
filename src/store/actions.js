@@ -13,5 +13,11 @@ export default {
       method: "GET"
     }).then(r => r.json())
       .then(json => context.commit("setGroups", json.groups))
+  },
+  loadTeachers(context) {
+    fetch(`${BASE_URL}/teachers`, {
+      method: "GET"
+    }).then(r => r.json())
+      .then(json => context.commit("setTeachers", json.teachers))
   }
 }

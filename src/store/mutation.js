@@ -4,5 +4,8 @@ export default {
   },
   setGroups(state, groups) {
     state.groups = groups
+  },
+  setTeachers(state, teachers) {
+    state.teachers = teachers
   }
 }

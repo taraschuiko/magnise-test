@@ -6,5 +6,8 @@ export default {
   },
   getGroups() {
     return store.state.groups
+  },
+  getTeachers() {
+    return store.state.teachers
   }
 }
