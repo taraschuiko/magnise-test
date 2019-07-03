@@ -8,7 +8,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    students: []
+    students: [],
+    groups: []
   },
   getters,
   mutations,
