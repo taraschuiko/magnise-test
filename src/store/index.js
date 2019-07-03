@@ -10,7 +10,8 @@ export default new Vuex.Store({
   state: {
     students: [],
     groups: [],
-    teachers: []
+    teachers: [],
+    schedules: []
   },
   getters,
   mutations,

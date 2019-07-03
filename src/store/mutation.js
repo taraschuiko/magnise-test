@@ -7,5 +7,8 @@ export default {
   },
   setTeachers(state, teachers) {
     state.teachers = teachers
+  },
+  setSchedules(state, schedules) {
+    state.schedules = schedules
   }
 }

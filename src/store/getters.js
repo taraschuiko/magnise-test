@@ -9,5 +9,8 @@ export default {
   },
   getTeachers() {
     return store.state.teachers
+  },
+  getSchedules() {
+    return store.state.schedules
   }
 }

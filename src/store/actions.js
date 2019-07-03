@@ -19,5 +19,11 @@ export default {
       method: "GET"
     }).then(r => r.json())
       .then(json => context.commit("setTeachers", json.teachers))
+  },
+  loadSchedules(context) {
+    fetch(`${BASE_URL}/schedules`, {
+      method: "GET"
+    }).then(r => r.json())
+      .then(json => context.commit("setSchedules", json.schedules))
   }
 }
