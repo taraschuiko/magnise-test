@@ -31,5 +31,11 @@ export default {
       method: "GET"
     }).then(r => r.json())
       .then(json => context.commit("setStudentDetail", json.student))
+  },
+  loadGroupSchedule(context, id) {
+    fetch(`${BASE_URL}/groups/${id}/schedule`, {
+      method: "GET"
+    }).then(r => r.json())
+      .then(json => context.commit("setGroupSchedule", json.schedule))
   }
 }

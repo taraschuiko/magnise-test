@@ -13,5 +13,8 @@ export default {
   },
   setStudentDetail(state, student) {
     state.studentDetail = student
+  },
+  setGroupSchedule(state, schedule) {
+    state.groupSchedule = schedule
   }
 }

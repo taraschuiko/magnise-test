@@ -12,7 +12,8 @@ export default new Vuex.Store({
     groups: [],
     teachers: [],
     schedules: [],
-    studentDetail: {}
+    studentDetail: {},
+    groupSchedule: []
   },
   getters,
   mutations,
