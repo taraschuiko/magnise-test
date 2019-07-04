@@ -10,5 +10,8 @@ export default {
   },
   setSchedules(state, schedules) {
     state.schedules = schedules
+  },
+  setStudentDetail(state, student) {
+    state.studentDetail = student
   }
 }

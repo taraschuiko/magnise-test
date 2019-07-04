@@ -12,5 +12,8 @@ export default {
   },
   getSchedules() {
     return store.state.schedules
+  },
+  getStudentDetail() {
+    return store.state.studentDetail
   }
 }
