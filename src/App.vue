@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Magnise Test</h1>
+    <h1>Magnise Test Task</h1>
     <Navigation />
     <router-view/>
   </div>
