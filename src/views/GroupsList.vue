@@ -1,17 +1,21 @@
 <template>
   <div class="list">
     <h2>Groups List</h2>
-    <router-link :to="`/group-schedule/${group.id}`" v-for="group in groups" :key="group.id">
-      <div class="list__item">
-        <p>Title: {{group.title}}</p>
-      </div>
-    </router-link>
+    <AddGroup />
+    <GroupsListItem v-for="group in groups" :key="group.id" :group="group" />
   </div>
 </template>
 
 <script>
+import AddGroup from "../components/AddGroup"
+import GroupsListItem from "../components/GroupsListItem"
+
 export default {
   name: "GroupsList",
+  components: {
+    AddGroup,
+    GroupsListItem
+  },
   computed: {
     groups() {
       return this.$store.getters.getGroups;

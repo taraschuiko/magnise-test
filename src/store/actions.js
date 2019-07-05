@@ -62,6 +62,31 @@ export default {
     fetch(`${BASE_URL}/students/${id}`, {
       method: "DELETE"
     }).then(() => context.dispatch("loadStudents"))
+  },
+  addGroup(context, group) {
+    fetch(`${BASE_URL}/groups`, {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-type": "application/x-www-form-urlencoded"
+      },
+      body: serialize(group)
+    }).then(() => context.dispatch("loadGroups"))
+  },
+  updateGroup(context, payload) {
+    fetch(`${BASE_URL}/groups/${payload.id}`, {
+      method: "PUT",
+      headers: {
+        "Accept": "application/json",
+        "Content-type": "application/x-www-form-urlencoded"
+      },
+      body: serialize(payload.group)
+    }).then(() => context.dispatch("loadGroups"))
+  },
+  deleteGroup(context, id) {
+    fetch(`${BASE_URL}/groups/${id}`, {
+      method: "DELETE"
+    }).then(() => context.dispatch("loadGroups"))
   }
 }
 
