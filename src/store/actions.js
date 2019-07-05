@@ -37,5 +37,25 @@ export default {
       method: "GET"
     }).then(r => r.json())
       .then(json => context.commit("setGroupSchedule", json.schedule))
+  },
+  addStudent(context, student) {
+    fetch(`${BASE_URL}/students`, {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-type": "application/x-www-form-urlencoded"
+      },
+      body: serialize(student)
+    }).then(r => r.json())
+    .then(() => context.dispatch("loadStudents"))
   }
+}
+
+function serialize(obj) {
+  let str = [];
+  for(let p in obj)
+    if (obj.hasOwnProperty(p)) {
+      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    }
+  return str.join("&");
 }
