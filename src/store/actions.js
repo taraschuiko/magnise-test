@@ -46,8 +46,22 @@ export default {
         "Content-type": "application/x-www-form-urlencoded"
       },
       body: serialize(student)
-    }).then(r => r.json())
-    .then(() => context.dispatch("loadStudents"))
+    }).then(() => context.dispatch("loadStudents"))
+  },
+  updateStudent(context, payload) {
+    fetch(`${BASE_URL}/students/${payload.id}`, {
+      method: "PUT",
+      headers: {
+        "Accept": "application/json",
+        "Content-type": "application/x-www-form-urlencoded"
+      },
+      body: serialize(payload.student)
+    }).then(() => context.dispatch("loadStudents"))
+  },
+  deleteStudent(context, id) {
+    fetch(`${BASE_URL}/students/${id}`, {
+      method: "DELETE"
+    }).then(() => context.dispatch("loadStudents"))
   }
 }
 

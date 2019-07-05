@@ -32,5 +32,10 @@ export default {
   border: 1px solid #ccc;
   padding: 0 15px;
   margin-bottom: 5px;
+  padding-bottom: 16px;
+
+  button {
+    cursor: pointer;
+  }
 }
 </style>
